@@ -63,14 +63,12 @@ Then
 * Nodejs files to help the build process:
 
 	- Rename languages: [rename-languages.js](https://github.com/davidayalas/static-site-uoc/blob/master/tasks/rename-languages.js)
-		- it changes between Hugo and Netlify language management (in fact, Netlify doesn't manages languages in filenames)
+		- it changes between Hugo and Netlify language management (in fact, Netlify doesn't manage languages in filenames)
 		- when you build to store in git, you need to set filenames to {{filename}}-{{language}}.md
 		- when you build to generate HTML, you need to set filenames to {{filename}}.{{language}}.md
 
 	- Create relative CMS to content/section: [create-relative-cms.js](https://github.com/davidayalas/static-site-uoc/blob/master/tasks/create-relative-cms.js)
 		- it loops over ./content folder and creates relative "admin cms" from https://github.com/davidayalas/static-site-uoc/tree/master/tasks/cms, replacing {{folder}} in [config.yml](https://github.com/davidayalas/static-site-uoc/blob/master/tasks/cms/config.yml)
-		- when you build to store in git, you need to set filenames to {{filename}}-{{language}}.md
-		- when you build to generate HTML, you need to set filenames to {{filename}}.{{language}}.md
 
 * CMS in the footer of the live site:
 
