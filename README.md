@@ -68,24 +68,24 @@ Then
 
 ## Key files to setup this strategy
 
-* Nodejs files to help the build process:
+* **Nodejs** files to help the build process:
 
-	- Rename languages: [rename-languages.js](https://github.com/davidayalas/static-site-uoc/blob/master/tasks/rename-languages.js)
+	- **Rename languages**: [rename-languages.js](https://github.com/davidayalas/static-site-uoc/blob/master/tasks/rename-languages.js)
 		- it changes between Hugo and Netlify language management (in fact, Netlify doesn't manage languages in filenames)
 		- when you build to store in git, you need to set filenames to {{filename}}-{{language}}.md
 		- when you build to generate HTML, you need to set filenames to {{filename}}.{{language}}.md
 
-	- Create relative CMS to content/section: [create-relative-cms.js](https://github.com/davidayalas/static-site-uoc/blob/master/tasks/create-relative-cms.js)
+	- Create **relative CMS** to content/section: [create-relative-cms.js](https://github.com/davidayalas/static-site-uoc/blob/master/tasks/create-relative-cms.js)
 		- it loops over ./content folder and creates relative "admin cms" from https://github.com/davidayalas/static-site-uoc/tree/master/tasks/cms, replacing {{folder}} in [config.yml](https://github.com/davidayalas/static-site-uoc/blob/master/tasks/cms/config.yml)
 
 * CMS in the footer of the live site:
 
-	* Hugo partial template 
+	* **Hugo partial template for CMS**
 		* [cms.html](https://github.com/davidayalas/static-site-uoc/blob/master/themes/web-uoc-1/layouts/partials/cms.html)
 		* it adds links to login (netlify identity), create new sections, new pages, edit pages, ...
 		* this template is only visible if param cms=true is attached to the url.
 
-	* Static file [cms.js](https://github.com/davidayalas/static-site-uoc/blob/master/themes/web-uoc-1/static/js/cms.js) to manage visibility and "create section" directly to git
+	* **Static javascript file** [cms.js](https://github.com/davidayalas/static-site-uoc/blob/master/themes/web-uoc-1/static/js/cms.js) to manage visibility and "create section" directly to git
 
 		* It push a version of [static/admin/_index.md](https://github.com/davidayalas/static-site-uoc/blob/master/static/admin/_index.md) to git for every of your configured languages. You can setup your frontmatter accordingly to your content type in config.yml
 
