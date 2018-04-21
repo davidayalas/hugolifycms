@@ -9,6 +9,8 @@ Repo: https://github.com/davidayalas/static-site-uoc/
 * Home: https://site-uoc.netlify.com/en/?cms=true (see the footer)
 * Section: https://site-uoc.netlify.com/en/section1/?cms=true
 * Page: https://site-uoc.netlify.com/en/section1/subsection1/page1/?cms=true
+* Nested section: http://site-uoc.netlify.com/en/section1/subsection1_1/?cms=true
+* Page in nested section:  http://site-uoc.netlify.com/en/section1/subsection1_1/page1/?cms=true
 
 ## Features
 
