@@ -1,6 +1,6 @@
 # Hugo + NetlifyCMS = Hugolifycms
 
-This tutorial demostrates how to integrate Hugo site and Netlify CMS, with N levels (nested sections/folders). It will be easily exportable to other [SSG](https://www.staticgen.com/))
+This tutorial demonstrates how to integrate Hugo generated site and Netlify CMS, with N levels (nested sections/folders). It will be easily exportable to other [SSG](https://www.staticgen.com/))
 
 Repo: https://github.com/davidayalas/static-site-uoc/
 
