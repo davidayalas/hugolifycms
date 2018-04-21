@@ -4,6 +4,10 @@ This tutorial demonstrates how to integrate Hugo generated site and Netlify CMS,
 
 Repo: https://github.com/davidayalas/static-site-uoc/
 
+### Live demo
+
+https://site-uoc.netlify.com/en/?cms=true (see the footer)
+
 ## Features
 
 * Hugo with nested folders integrated with NetlifyCMS
