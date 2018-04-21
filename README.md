@@ -54,9 +54,9 @@ Then
 
 	![deploy settings](img/deploy-settings.png)
 
-2. Setup identity
+2. Setup Netlify Identity
 
-3. Setup git gateway
+3. Setup Netlify Git Gateway
 
 ## Key files to setup this strategy
 
