@@ -6,7 +6,9 @@ Repo: https://github.com/davidayalas/static-site-uoc/
 
 ### Live demo
 
-https://site-uoc.netlify.com/en/?cms=true (see the footer)
+* Home: https://site-uoc.netlify.com/en/?cms=true (see the footer)
+* Section: https://site-uoc.netlify.com/en/section1/?cms=true
+* Page: https://site-uoc.netlify.com/en/section1/subsection1/page1/?cms=true
 
 ## Features
 
