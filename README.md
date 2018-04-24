@@ -78,7 +78,6 @@ Then
 
 	- Create **relative CMS** to content/section: [create-relative-cms.js](https://github.com/davidayalas/static-site-uoc/blob/master/tasks/create-relative-cms.js)
 		- it loops over ./content folder and creates relative "admin cms" from https://github.com/davidayalas/static-site-uoc/tree/master/tasks/cms, replacing {{folder}} in [config.yml](https://github.com/davidayalas/static-site-uoc/blob/master/tasks/cms/config.yml)
-<<<<<<< HEAD
 
 			![Sample relative CMS](img/sample-tree-cms.png)
 
@@ -86,10 +85,6 @@ Then
 
 		- when you build to store in git, you need to set filenames to {{filename}}-{{language}}.md
 		- when you build to generate HTML, you need to set filenames to {{filename}}.{{language}}.md
-=======
->>>>>>> 217b1ebc9bc0dd3d4f423b08572604e4e8aecb66
-
-
 
 * CMS in the footer of the live site:
 
@@ -98,14 +93,9 @@ Then
 		* it adds links to login (netlify identity), create new sections, new pages, edit pages, ...
 		* this template is only visible if param cms=true is attached to the url.
 
-<<<<<<< HEAD
 			![Footer CMS](img/cms-footer.png)
 
 	* Static file [cms.js](https://github.com/davidayalas/static-site-uoc/blob/master/themes/web-uoc-1/static/js/cms.js) to manage visibility and "create section" directly to git
-=======
-	* **Static javascript file** [cms.js](https://github.com/davidayalas/static-site-uoc/blob/master/themes/web-uoc-1/static/js/cms.js) to manage visibility and "create section" directly to git
->>>>>>> 217b1ebc9bc0dd3d4f423b08572604e4e8aecb66
-
 		* It push a version of [static/admin/_index.md](https://github.com/davidayalas/static-site-uoc/blob/master/static/admin/_index.md) to git for every of your configured languages. You can setup your frontmatter accordingly to your content type in config.yml
 
 * There are two "instances" of Netlify CMS:
@@ -121,8 +111,3 @@ Then, the best way now is to access directly to github. This is done through Net
 Github Auth is the easiest way to deploy sites outside netlify, you only need a custom auth app like these: https://www.netlifycms.org/docs/authentication-backends/.
 
 Hard way is with Netlify Git Gateway and Gotrue, but is better because users can access to limited resources and they don't need a Github account
-
-
-
-
-
