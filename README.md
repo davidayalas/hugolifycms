@@ -9,6 +9,7 @@ Repo: https://github.com/davidayalas/static-site-uoc/
 * Hugo with nested folders integrated with NetlifyCMS
 * Multilanguage (Netlifycms and Hugo suport for multilanguage are incompatibles by now) 
 * CMS accessible from live site
+* It works with Netlify Identity and Github Auth:  main problem here was creating new sections paths in content folder.
 
 ## Motivation
 
@@ -69,8 +70,15 @@ Then
 
 	- Create relative CMS to content/section: [create-relative-cms.js](https://github.com/davidayalas/static-site-uoc/blob/master/tasks/create-relative-cms.js)
 		- it loops over ./content folder and creates relative "admin cms" from https://github.com/davidayalas/static-site-uoc/tree/master/tasks/cms, replacing {{folder}} in [config.yml](https://github.com/davidayalas/static-site-uoc/blob/master/tasks/cms/config.yml)
+
+			![Sample relative CMS](img/sample-tree-cms.png)
+
+			- then, you can access admin a section through you live site navigating to https://yoursite.com/admin/section1/subsection1/subsubsection1_1/
+
 		- when you build to store in git, you need to set filenames to {{filename}}-{{language}}.md
 		- when you build to generate HTML, you need to set filenames to {{filename}}.{{language}}.md
+
+
 
 * CMS in the footer of the live site:
 
@@ -78,6 +86,8 @@ Then
 		* [cms.html](https://github.com/davidayalas/static-site-uoc/blob/master/themes/web-uoc-1/layouts/partials/cms.html)
 		* it adds links to login (netlify identity), create new sections, new pages, edit pages, ...
 		* this template is only visible if param cms=true is attached to the url.
+
+			![Footer CMS](img/cms-footer.png)
 
 	* Static file [cms.js](https://github.com/davidayalas/static-site-uoc/blob/master/themes/web-uoc-1/static/js/cms.js) to manage visibility and "create section" directly to git
 
@@ -87,10 +97,16 @@ Then
 	* Usual [static/admin](https://github.com/davidayalas/static-site-uoc/tree/master/static/admin), recommended to manage home staff
 	* [tasks/cms](https://github.com/davidayalas/static-site-uoc/tree/master/tasks/cms) to manage the content related with a section
 
-## How it works
+## Sections explained
 
-* Live demo: https://site-uoc.netlify.com/
-* Live demo with CMS (see the footer): https://site-uoc.netlify.com/en/?cms=true
+It's not possible (now) to create a new path in github from Netlify CMS. It's not possible setup config.yml "folder" with a dynamic value from files, or in case you put a variable in the slug (e.g slug: /{{folder}}/filaname.md) it gets sanitized and folder isn't created.
+
+Then, the best way now is to access directly to github. This is done through Netlify Git Gateway (easy way) or through Git Auth Workflow. All the staff is in [cms.js](https://github.com/davidayalas/static-site-uoc/blob/master/themes/web-uoc-1/static/js/cms.js) and it can be improved :)
+
+Github Auth is the easiest way to deploy sites outside netlify, you only need a custom auth app like these: https://www.netlifycms.org/docs/authentication-backends/.
+
+Hard way is with Netlify Git Gateway and Gotrue, but is better because users can access to limited resources and they don't need a Github account
+
 
 
 
