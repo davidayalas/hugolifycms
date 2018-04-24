@@ -1,4 +1,4 @@
-# Hugo + NetlifyCMS = Hugolifycms
+# Hugo + NetlifyCMS = HugolifyCMS
 
 This tutorial demonstrates how to integrate Hugo generated site and Netlify CMS, with N levels (nested sections/folders). It will be easily exportable to other [SSG](https://www.staticgen.com/))
 
