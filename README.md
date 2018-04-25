@@ -101,6 +101,8 @@ Then
 * There are two "instances" of Netlify CMS:
 	* Usual [static/admin](https://github.com/davidayalas/static-site-uoc/tree/master/static/admin), recommended to manage home staff
 	* [tasks/cms](https://github.com/davidayalas/static-site-uoc/tree/master/tasks/cms) to manage the content related with a section
+	* **NOTE for Github Custom Auth**: in both [static/admin/config.yml](https://github.com/davidayalas/static-site-uoc/tree/master/static/admin/config.yml) and [tasks/cms/config.yml](https://github.com/davidayalas/static-site-uoc/tree/master/tasks/cms/config.yml) is important to setup a **client_id key** with your github application id.
+
 
 ## Sections explained
 
