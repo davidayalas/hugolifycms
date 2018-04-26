@@ -91,6 +91,7 @@ Then
 
 1. Setup your application in a free tier
 2. Setup an environment variable for NodeJS version 8.5.0 (minimum version, to use nodejs to rename languages and relative cms)
+
 ![Azure Setup](img/appservice-setup.png)
 
 Files:
