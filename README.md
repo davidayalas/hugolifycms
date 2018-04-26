@@ -2,8 +2,7 @@
 
 This tutorial demonstrates how to integrate Hugo generated site and Netlify CMS, with N levels (nested sections/folders). It will be easily exportable to other [SSG](https://www.staticgen.com/))
 
-Repo: https://github.co
-m/davidayalas/static-site-uoc/
+Repo: https://github.com/davidayalas/static-site-uoc/
 
 ### Contents 
 
