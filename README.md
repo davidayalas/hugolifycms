@@ -2,17 +2,23 @@
 
 This tutorial demonstrates how to integrate Hugo generated site and Netlify CMS, with N levels (nested sections/folders). It will be easily exportable to other [SSG](https://www.staticgen.com/))
 
-Repo: https://github.com/davidayalas/static-site-uoc/
+Repo: https://github.co
+m/davidayalas/static-site-uoc/
 
 ### Contents 
 
-<style>
-	div.toc > ul > li > a{display:none;}
-	div.toc > ul > li{list-style: none;}
-	div.toc > ul > li > ul > li:nth-child(1){display:none!important;}
-</style>
 
-[TOC]
+- [Live demo](#live-demo)
+- [Features](#features)
+- [Motivation](#motivation)
+- [Setup](#setup)
+	- [Netlify setup](#netlify-setup)
+	- [Azure setup](#azure-setup)
+- [Key files to setup this strategy](#key-files-to-setup-this-strategy)
+- [Sections explained](#sections-explained)
+
+
+
 
 ### Live demo
 
@@ -81,7 +87,8 @@ Then
 
 ### Azure setup
 
-[![Deploy to Azure](https://azuredeploy.net/deploybutton.png)](https://azuredeploy.net/?repository=https://github.com/davidayalas/static-site-uoc)
+[![Deploy to Azure](https://azuredeploy.net/deploybutton.png)](https://azuredeploy.net/?repository=https://github.com/davidayalas/static-site-uoc
+)
 
 1. Setup your application in a free tier
 2. Setup an environment variable for NodeJS version 8.5.0 (minimum version, to use nodejs to rename languages and relative cms)
