@@ -81,7 +81,7 @@ Then
 
 ### Azure setup
 
-[![Deploy to Azure](https://azuredeploy.net/deploybutton.png)](https://azuredeploy.net/)
+[![Deploy to Azure](https://azuredeploy.net/deploybutton.png)](https://azuredeploy.net/?repository=https://github.com/davidayalas/static-site-uoc)
 
 1. Setup your application in a free tier
 2. Setup an environment variable for NodeJS version 8.5.0 (minimum version, to use nodejs to rename languages and relative cms)
