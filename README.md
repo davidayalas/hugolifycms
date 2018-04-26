@@ -4,6 +4,16 @@ This tutorial demonstrates how to integrate Hugo generated site and Netlify CMS,
 
 Repo: https://github.com/davidayalas/static-site-uoc/
 
+### Contents 
+
+<style>
+	div.toc > ul > li > a{display:none;}
+	div.toc > ul > li{list-style: none;}
+	div.toc > ul > li > ul > li:nth-child(1){display:none!important;}
+</style>
+
+[TOC]
+
 ### Live demo
 
 * Home: https://site-uoc.netlify.com/en/?cms=true (see the footer)
@@ -53,9 +63,10 @@ Then
 
 (change the url from the button with you own repo)
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/davidayalas/static-site-uoc)
 
-## Netlify setup
+### Netlify setup
+
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/davidayalas/static-site-uoc)
 
 1. Build command:
 
@@ -66,6 +77,21 @@ Then
 2. Setup Netlify Identity
 
 3. Setup Netlify Git Gateway
+
+
+### Azure setup
+
+[![Deploy to Azure](https://azuredeploy.net/deploybutton.png)](https://azuredeploy.net/)
+
+1. Setup your application in a free tier
+2. Setup an environment variable for NodeJS version 8.5.0 (minimum version, to use nodejs to rename languages and relative cms)
+![Azure Setup](img/appservice-setup.png)
+
+Files:
+
+- [.deployment](https://github.com/davidayalas/static-site-uoc/blob/master/.deployment)
+- [azure-deploy.cmd](https://github.com/davidayalas/static-site-uoc/blob/master/azure-deploy.cmd)
+- More info: http://www.nobadmemories.com/blog/2017/05/blogging-with-hugo-and-azure/
 
 ## Key files to setup this strategy
 
