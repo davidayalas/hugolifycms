@@ -66,12 +66,12 @@ Then
 		$ git commit -m "new version"		
 		$ git push
 
-(change the url from the button with you own repo)
-
 
 ### Netlify setup
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/davidayalas/static-site-uoc)
+
+(change the url with your own repo)
 
 1. Build command:
 
