@@ -30,7 +30,7 @@ Repo: https://github.com/davidayalas/static-site-uoc/
 ## Features
 
 * Hugo with nested folders integrated with NetlifyCMS
-* Multilanguage (Netlifycms and Hugo suport for multilanguage are incompatibles by now) 
+* Multilanguage (Netlifycms and Hugo support for multilanguage are incompatibles by now) 
 * CMS accessible from live site
 * It works with Netlify Identity and Github Auth:  main problem here was creating new sections paths in content folder.
 
