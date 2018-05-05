@@ -1,6 +1,6 @@
 # Hugo + NetlifyCMS = HugolifyCMS
 
-This tutorial demonstrates how to integrate Hugo generated site and Netlify CMS, with N levels (nested sections/folders). It will be easily exportable to other [SSG](https://www.staticgen.com/))
+This tutorial demonstrates how to integrate Hugo generated site and Netlify CMS, with N levels (nested sections/folders). It is easily exportable to other [SSG](https://www.staticgen.com/)
 
 Repo: https://github.com/davidayalas/static-site-uoc/
 
@@ -27,7 +27,7 @@ Repo: https://github.com/davidayalas/static-site-uoc/
 ## Features
 
 * Hugo with nested folders integrated with NetlifyCMS
-* Multilanguage (Netlifycms and Hugo suport for multilanguage are incompatibles by now) 
+* Multilanguage (Netlifycms and Hugo support for multilanguage are incompatibles by now) 
 * CMS accessible from live site
 * It works with Netlify Identity and Github Auth:  main problem here was creating new sections paths in content folder.
 
@@ -63,12 +63,12 @@ Then
 		$ git commit -m "new version"		
 		$ git push
 
-(change the url from the button with you own repo)
-
 
 ### Netlify setup
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/davidayalas/static-site-uoc)
+
+(change the url with your own repo)
 
 1. Build command:
 
@@ -88,6 +88,7 @@ Then
 
 1. Setup your application in a free tier
 2. Setup an environment variable for NodeJS version 8.5.0 (minimum version, to use nodejs to rename languages and relative cms)
+
 ![Azure Setup](img/appservice-setup.png)
 
 Files:
