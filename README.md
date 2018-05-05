@@ -2,11 +2,9 @@
 
 This tutorial demonstrates how to integrate Hugo generated site and Netlify CMS, with N levels (nested sections/folders). It will be easily exportable to other [SSG](https://www.staticgen.com/))
 
-Repo: https://github.co
-m/davidayalas/static-site-uoc/
+Repo: https://github.com/davidayalas/static-site-uoc/
 
 ### Contents 
-
 
 - [Live demo](#live-demo)
 - [Features](#features)
@@ -16,8 +14,6 @@ m/davidayalas/static-site-uoc/
 	- [Azure setup](#azure-setup)
 - [Key files to setup this strategy](#key-files-to-setup-this-strategy)
 - [Sections explained](#sections-explained)
-
-
 
 
 ### Live demo
@@ -110,7 +106,7 @@ Files:
 		- when you build to generate HTML, you need to set filenames to {{filename}}.{{language}}.md
 
 	- Create **relative CMS** to content/section: [create-relative-cms.js](https://github.com/davidayalas/static-site-uoc/blob/master/tasks/create-relative-cms.js)
-		- it loops over ./content folder and creates relative "admin cms" from https://github.com/davidayalas/static-site-uoc/tree/master/tasks/cms, replacing {{folder}} in [config.yml](https://github.com/davidayalas/static-site-uoc/blob/master/tasks/cms/config.yml)
+		- it loops over ./content folder and creates relative "admin cms" to each section, copying [static/admin/index.html](https://github.com/davidayalas/static-site-uoc/blob/master/static/admin/index.html) and [static/admin/relative.yml](https://github.com/davidayalas/static-site-uoc/blob/master/static/admin/relative.yml) (as config.yml), replacing {{folder}} in [relative.yml](https://github.com/davidayalas/static-site-uoc/blob/master/static/admin/relative.yml)
 
 			![Sample relative CMS](img/sample-tree-cms.png)
 
@@ -132,9 +128,9 @@ Files:
 		* It push a version of [static/admin/_index.md](https://github.com/davidayalas/static-site-uoc/blob/master/static/admin/_index.md) to git for every of your configured languages. You can setup your frontmatter accordingly to your content type in config.yml
 
 * There are two "instances" of Netlify CMS:
-	* Usual [static/admin](https://github.com/davidayalas/static-site-uoc/tree/master/static/admin), recommended to manage home staff
-	* [tasks/cms](https://github.com/davidayalas/static-site-uoc/tree/master/tasks/cms) to manage the content related with a section
-	* **NOTE for Github Custom Auth**: in both [static/admin/config.yml](https://github.com/davidayalas/static-site-uoc/tree/master/static/admin/config.yml) and [tasks/cms/config.yml](https://github.com/davidayalas/static-site-uoc/tree/master/tasks/cms/config.yml) is important to setup a **client_id key** with your github application id.
+	* Usual [static/admin/config.yml](https://github.com/davidayalas/static-site-uoc/tree/master/static/admin/config.yml), recommended to manage home staff
+	* [static/admin/relative.yml](https://github.com/davidayalas/static-site-uoc/tree/master/static/admin/relative.yml) to manage the content related with a section
+	* **NOTE for Github Custom Auth**: in both [static/admin/config.yml](https://github.com/davidayalas/static-site-uoc/tree/master/static/admin/config.yml) and [static/admin/relative.yml](https://github.com/davidayalas/static-site-uoc/tree/master/static/admin/relative.yml) is important to setup a **client_id key** with your github application id.
 
 
 ## Sections explained
