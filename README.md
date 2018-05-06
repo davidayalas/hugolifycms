@@ -119,14 +119,16 @@ Files:
 * CMS in the footer of the live site:
 
 	* **Hugo partial template for CMS**
-		* [cms.html](https://github.com/davidayalas/static-site-uoc/blob/master/themes/web-uoc-1/layouts/partials/cms.html)
+		* [cms.html](https://github.com/davidayalas/static-site-uoc/blob/master/layouts/partials/cms.html)
 		* it adds links to login (netlify identity), create new sections, new pages, edit pages, ...
 		* this template is only visible if param cms=true is attached to the url.
 
 			![Footer CMS](img/cms-footer.png)
 
-	* Static file [cms.js](https://github.com/davidayalas/static-site-uoc/blob/master/themes/web-uoc-1/static/js/cms.js) to manage visibility and "create section" directly to git
+	* Static file [cms.js](https://github.com/davidayalas/static-site-uoc/blob/master/static/js/cms.js) to manage visibility and "create section" directly to git
 		* It push a version of [static/admin/_index.md](https://github.com/davidayalas/static-site-uoc/blob/master/static/admin/_index.md) to git for every of your configured languages. You can setup your frontmatter accordingly to your content type in config.yml
+
+	* You can copy all the directory [static](https://github.com/davidayalas/static-site-uoc/blob/master/static/) into your Hugo site, and include in your [footer.html](https://github.com/davidayalas/static-site-uoc/blob/master/themes/web-uoc-1/layouts/partials/footer.html) an include to the cms partial template
 
 * There are two "instances" of Netlify CMS:
 	* Usual [static/admin/config.yml](https://github.com/davidayalas/static-site-uoc/tree/master/static/admin/config.yml), recommended to manage home staff
@@ -138,7 +140,7 @@ Files:
 
 It's not possible (April 2018) to create a new path in github from Netlify CMS. It's not possible setup config.yml "folder" with a dynamic value from files, or in case you put a variable in the slug (e.g slug: /{{folder}}/filaname.md) it gets sanitized and folder isn't created.
 
-Then, the best way now is to access directly to github. This is done through Netlify Git Gateway (easy way) or through Git Auth Workflow. All the staff is in [cms.js](https://github.com/davidayalas/static-site-uoc/blob/master/themes/web-uoc-1/static/js/cms.js) and it can be improved :)
+Then, the best way now is to access directly to github. This is done through Netlify Git Gateway (easy way) or through Git Auth Workflow. All the staff is in [cms.js](https://github.com/davidayalas/static-site-uoc/blob/master/static/js/cms.js) and it can be improved :)
 
 Github Auth is the easiest way to deploy sites outside netlify, you only need a custom auth app like these: https://www.netlifycms.org/docs/authentication-backends/.
 
