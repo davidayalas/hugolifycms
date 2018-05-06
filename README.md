@@ -6,6 +6,8 @@ Repo: https://github.com/davidayalas/static-site-uoc/
 
 ### Contents 
 
+<!-- _MarkdownTOC autolink="true" -->
+
 - [Live demo](#live-demo)
 - [Features](#features)
 - [Motivation](#motivation)
@@ -13,8 +15,11 @@ Repo: https://github.com/davidayalas/static-site-uoc/
 	- [Netlify setup](#netlify-setup)
 	- [Azure setup](#azure-setup)
 - [Key files to setup this strategy](#key-files-to-setup-this-strategy)
+	1. [Nodejs files to help the build process](#1-nodejs-files-to-help-the-build-process)
+	2. [CMS in the footer of the live site](#2-cms-in-the-footer-of-the-live-site)
 - [Sections explained](#sections-explained)
 
+<!-- /_MarkdownTOC -->
 
 ### Live demo
 
@@ -99,42 +104,42 @@ Files:
 
 ## Key files to setup this strategy
 
-* **Nodejs** files to help the build process:
+### 1) **Nodejs** files to help the build process
 
-	- **Rename languages**: [rename-languages.js](https://github.com/davidayalas/static-site-uoc/blob/master/tasks/rename-languages.js)
-		- it changes between Hugo and Netlify language management (in fact, Netlify doesn't manage languages in filenames)
-		- when you build to store in git, you need to set filenames to {{filename}}-{{language}}.md
-		- when you build to generate HTML, you need to set filenames to {{filename}}.{{language}}.md
+- **Rename languages**: [rename-languages.js](https://github.com/davidayalas/static-site-uoc/blob/master/tasks/rename-languages.js)
+	- it changes between Hugo and Netlify language management (in fact, Netlify doesn't manage languages in filenames)
+	- when you build to store in git, you need to set filenames to {{filename}}-{{language}}.md
+	- when you build to generate HTML, you need to set filenames to {{filename}}.{{language}}.md
 
-	- Create **relative CMS** to content/section: [create-relative-cms.js](https://github.com/davidayalas/static-site-uoc/blob/master/tasks/create-relative-cms.js)
-		- it loops over ./content folder and creates relative "admin cms" to each section, copying [static/admin/index.html](https://github.com/davidayalas/static-site-uoc/blob/master/static/admin/index.html) and [static/admin/relative.yml](https://github.com/davidayalas/static-site-uoc/blob/master/static/admin/relative.yml) (as config.yml), replacing {{folder}} in [relative.yml](https://github.com/davidayalas/static-site-uoc/blob/master/static/admin/relative.yml)
+- Create **relative CMS** to content/section: [create-relative-cms.js](https://github.com/davidayalas/static-site-uoc/blob/master/tasks/create-relative-cms.js)
+	- it loops over ./content folder and creates relative "admin cms" to each section, copying [static/admin/index.html](https://github.com/davidayalas/static-site-uoc/blob/master/static/admin/index.html) and [static/admin/relative.yml](https://github.com/davidayalas/static-site-uoc/blob/master/static/admin/relative.yml) (as config.yml), replacing {{folder}} in [relative.yml](https://github.com/davidayalas/static-site-uoc/blob/master/static/admin/relative.yml)
 
-			![Sample relative CMS](img/sample-tree-cms.png)
+		![Sample relative CMS](img/sample-tree-cms.png)
 
-			- then, you can access admin a section through you live site navigating to https://yoursite.com/admin/section1/subsection1/subsubsection1_1/
+		- then, you can access admin a section through you live site navigating to https://yoursite.com/admin/section1/subsection1/subsubsection1_1/
 
-		- when you build to store in git, you need to set filenames to {{filename}}-{{language}}.md
-		- when you build to generate HTML, you need to set filenames to {{filename}}.{{language}}.md
+	- when you build to store in git, you need to set filenames to {{filename}}-{{language}}.md
+	- when you build to generate HTML, you need to set filenames to {{filename}}.{{language}}.md
 
-* CMS in the footer of the live site:
+### 2) CMS in the footer of the live site
 
-	* **Hugo partial template for CMS**
-		* [cms.html](https://github.com/davidayalas/static-site-uoc/blob/master/layouts/partials/cms.html)
-		* it adds links to login (netlify identity), create new sections, new pages, edit pages, ...
-		* this template is only visible if param cms=true is attached to the url.
+* **Hugo partial template for CMS**
+	* [cms.html](https://github.com/davidayalas/static-site-uoc/blob/master/layouts/partials/cms.html)
+	* it adds links to login (netlify identity), create new sections, new pages, edit pages, ...
+	* this template is only visible if param cms=true is attached to the url.
 
-			![Footer CMS](img/cms-footer.png)
+		![Footer CMS](img/cms-footer.png)
 
-	* Static file [cms.js](https://github.com/davidayalas/static-site-uoc/blob/master/static/js/cms.js) to manage visibility and "create section" directly to git
-		* It push a version of [static/admin/_index.md](https://github.com/davidayalas/static-site-uoc/blob/master/static/admin/_index.md) to git for every of your configured languages. You can setup your frontmatter accordingly to your content type in config.yml
+* Static file [cms.js](https://github.com/davidayalas/static-site-uoc/blob/master/static/js/cms.js) to manage visibility and "create section" directly to git
 
-	* You can copy all the directory [static](https://github.com/davidayalas/static-site-uoc/blob/master/static/) into your Hugo site, and include in your [footer.html](https://github.com/davidayalas/static-site-uoc/blob/master/themes/web-uoc-1/layouts/partials/footer.html) an include to the cms partial template
+	* It push a version of [static/admin/_index.md](https://github.com/davidayalas/static-site-uoc/blob/master/static/admin/_index.md) to git for every of your configured languages. You can setup your frontmatter accordingly to your content type in config.yml
+
+* You can copy all the directory [static](https://github.com/davidayalas/static-site-uoc/blob/master/static/) into your Hugo site, and include in your [footer.html](https://github.com/davidayalas/static-site-uoc/blob/master/themes/web-uoc-1/layouts/partials/footer.html) an include to the cms partial template
 
 * There are two "instances" of Netlify CMS:
 	* Usual [static/admin/config.yml](https://github.com/davidayalas/static-site-uoc/tree/master/static/admin/config.yml), recommended to manage home staff
 	* [static/admin/relative.yml](https://github.com/davidayalas/static-site-uoc/tree/master/static/admin/relative.yml) to manage the content related with a section
 	* **NOTE for Github Custom Auth**: in both [static/admin/config.yml](https://github.com/davidayalas/static-site-uoc/tree/master/static/admin/config.yml) and [static/admin/relative.yml](https://github.com/davidayalas/static-site-uoc/tree/master/static/admin/relative.yml) is important to setup a **client_id key** with your github application id.
-
 
 ## Sections explained
 
