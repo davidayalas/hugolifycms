@@ -134,12 +134,14 @@ Files:
 
 	* It push a version of [static/admin/_index.md](https://github.com/davidayalas/static-site-uoc/blob/master/static/admin/_index.md) to git for every of your configured languages. You can setup your frontmatter accordingly to your content type in config.yml
 
-* You can copy all the directory [static](https://github.com/davidayalas/static-site-uoc/blob/master/static/) into your Hugo site, and include in your [footer.html](https://github.com/davidayalas/static-site-uoc/blob/master/themes/web-uoc-1/layouts/partials/footer.html) an include to the cms partial template
-
 * There are two "instances" of Netlify CMS:
 	* Usual [static/admin/config.yml](https://github.com/davidayalas/static-site-uoc/tree/master/static/admin/config.yml), recommended to manage home staff
 	* [static/admin/relative.yml](https://github.com/davidayalas/static-site-uoc/tree/master/static/admin/relative.yml) to manage the content related with a section
 	* **NOTE for Github Custom Auth**: in both [static/admin/config.yml](https://github.com/davidayalas/static-site-uoc/tree/master/static/admin/config.yml) and [static/admin/relative.yml](https://github.com/davidayalas/static-site-uoc/tree/master/static/admin/relative.yml) is important to setup a **client_id key** with your github application id.
+
+### 3) Files to import into your project
+
+* You can copy directories [static](https://github.com/davidayalas/static-site-uoc/blob/master/static/), [layouts](https://github.com/davidayalas/static-site-uoc/blob/master/layouts/) and [tasks](https://github.com/davidayalas/static-site-uoc/blob/master/tasks/) into your Hugo site, and include in your [footer.html](https://github.com/davidayalas/static-site-uoc/blob/master/themes/web-uoc-1/layouts/partials/footer.html) an include to the cms partial template.
 
 ## Sections explained
 
