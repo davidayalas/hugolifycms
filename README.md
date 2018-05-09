@@ -17,6 +17,7 @@ Repo: https://github.com/davidayalas/static-site-uoc/
 - [Key files to setup this strategy](#key-files-to-setup-this-strategy)
 	1. [Nodejs files to help the build process](#1-nodejs-files-to-help-the-build-process)
 	2. [CMS in the footer of the live site](#2-cms-in-the-footer-of-the-live-site)
+	3. [Files to import into your project](#3-files-to-import-into-your-project)
 - [Sections explained](#sections-explained)
 
 <!-- /_MarkdownTOC -->
